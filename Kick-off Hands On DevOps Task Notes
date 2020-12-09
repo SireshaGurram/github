@@ -1,0 +1,17 @@
+Steps:
+Create a branch named bugfix/ORDC-7210 inside https://bitbucket.sharedtools.vet-tools.digitalecp.mcd.com/projects/CONFIG/repos/configurations/browse 
+You need to go to https://jenkins.sharedtools.vet-tools.digitalecp.mcd.com/job/PushButtonDeployProvisioned/job/Deployment/job/US/job/Non-Prod/view/OTR/job/otr-dotnetcore-container-loyalt-restaurant-proxy-mock-deploy/41/consoleFull that is failing and check what is the missing variable.
+ERROR Detected:
+[Pipeline] echo
+Deployment account not found, please add "deploy_account" to your terraform config file.
+Checkout your Branch in your local machine that you already had created into step 1. https://bitbucket.sharedtools.vet-tools.digitalecp.mcd.com/projects/CONFIG/repos/configurations/browse
+Identify if the issue is into Plan / Apply Infrastructure | Plan / Apply Deployment
+https://bitbucket.sharedtools.vet-tools.digitalecp.mcd.com/projects/CONFIG/repos/configurations/browse/orders/terraform/otr-dotnetcore-container-loyalt-restaurant-proxy-mock-terraform_deployment/%24%7BfileNameEnv%7D-%24%7Bmarket%7D-template.yml add the value that is needed
+
+deploy_account: ${​​​​awsAccount}​​​​​​​​​​​
+ 
+Commit your code and push to remote
+Wait the Quality Gate https://jenkins.sharedtools.vet-tools.digitalecp.mcd.com/view/Configuration/job/Configuration/job/Configuration%20Quality%20Test/
+If all good Open the PR to master branch of configuration repository, get the approvals and merge
+if fails you need to fix the config issue and back to step 5
+if step 7 ok, now try to deploy the otr-dotnetcore-container-loyalt-restaurant-proxy-mock-deploy again.
