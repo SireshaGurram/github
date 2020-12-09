@@ -16,3 +16,4 @@ Wait the Quality Gate https://jenkins.sharedtools.vet-tools.digitalecp.mcd.com/v
 If all good Open the PR to master branch of configuration repository, get the approvals and merge
 if fails you need to fix the config issue and back to step 5
 if step 7 ok, now try to deploy the otr-dotnetcore-container-loyalt-restaurant-proxy-mock-deploy again.
+https://stackoverflow.com/questions/22575662/filename-too-long-in-git-for-windows
