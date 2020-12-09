@@ -1,3 +1,4 @@
+Notes:
 Steps:
 Create a branch named bugfix/ORDC-7210 inside https://bitbucket.sharedtools.vet-tools.digitalecp.mcd.com/projects/CONFIG/repos/configurations/browse 
 You need to go to https://jenkins.sharedtools.vet-tools.digitalecp.mcd.com/job/PushButtonDeployProvisioned/job/Deployment/job/US/job/Non-Prod/view/OTR/job/otr-dotnetcore-container-loyalt-restaurant-proxy-mock-deploy/41/consoleFull that is failing and check what is the missing variable.
